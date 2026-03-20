@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Java Reviewer Dashboard</title>
+<title>Reviewer Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drag-drop-touch-polyfill/1.0.0/drag-drop-touch-polyfill.min.js"></script>
 
@@ -216,7 +216,7 @@
 
 <div id="splashScreen">
   <div class="splash-title">Hello Learner!</div>
-  <div class="splash-subtitle">Welcome to the java reviewer!</div>
+  <div class="splash-subtitle">Welcome to the reviewer!</div>
   <button class="enter-btn" onclick="enterDashboard()">Enter Dashboard</button>
 </div>
 
@@ -224,7 +224,7 @@
   <div class="topbar-left">
     <button id="backBtn" onclick="showHome()">← Back</button>
     <div>
-      <div class="topbar-title" onclick="showHome()">ITS Java Reviewer Dashboard</div>
+      <div class="topbar-title" onclick="showHome()">Reviewer Dashboard</div>
       <div class="topbar-sub" id="topbarSub">powered by boredom</div>
     </div>
   </div>
@@ -286,7 +286,7 @@ function initMenu() {
 
   // 1. SUBJECT SELECTION
   if (currentView === 'subjects') {
-    topbarSub.textContent = "Choose a Subject";
+    topbarSub.textContent = "powered by boredom"; // Set custom subheading on main screen
     const subjects = [...new Set(Object.values(quizDB).map(q => q.subject || "General"))];
     
     subjects.forEach(sub => {
