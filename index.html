@@ -96,12 +96,12 @@
 
   /* QUIZ LAYOUT */
   #quizScreen { display: none; max-width: 1100px; margin: 0 auto; padding: 24px 16px; gap: 20px; align-items: flex-start; }
-  .sidebar { width: 220px; flex-shrink: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; position: sticky; top: 72px; max-height: calc(100vh - 96px); overflow-y: auto; }
+  .sidebar { width: 220px; flex-shrink: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; position: sticky; top: 72px; max-height: calc(100vh - 96px); overflow-y: auto; transition: all 0.3s ease; }
   .sidebar-label { font-size: 0.7rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
   .q-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
   
   /* MOBILE NAVIGATOR (Hidden on Desktop) */
-  .mobile-nav-container { display: none; }
+  .mobile-nav-container { display: none; transition: all 0.3s ease; }
   .mobile-q-grid { display: none; }
 
   .q-dot { width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border); background: transparent; font-size: 0.65rem; font-weight: 600; color: var(--muted); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
@@ -112,8 +112,8 @@
   .q-dot.active.st-correct { background: var(--green); border-color: var(--green); color: #fff; }
   .q-dot.active.st-wrong { background: var(--red); border-color: var(--red); color: #fff; }
 
-  .content { flex: 1; min-width: 0; width: 100%; }
-  .prog-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .content { flex: 1; min-width: 0; width: 100%; transition: all 0.3s ease; }
+  .prog-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; transition: all 0.3s ease; }
   .prog-bar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
   .prog-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--purple)); border-radius: 3px; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 10px rgba(168, 85, 247, 0.4); }
   .prog-text { font-size: 0.75rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
@@ -128,7 +128,7 @@
   
   pre { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; background: #020617; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; padding: 16px; overflow-x: auto; margin: 16px 0; line-height: 1.6; color: #e2e8f0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.5); }
 
-  /* CHOICES (MCQ & MSQ) */
+  /* CHOICES */
   .choices { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
   .choice-btn { background: transparent; border: 1.5px solid var(--border); border-radius: 8px; padding: 14px 16px; color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; text-align: left; cursor: pointer; transition: all 0.15s; line-height: 1.6; display: flex; gap: 12px; align-items: flex-start; }
   .choice-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-light); }
@@ -158,7 +158,6 @@
 
   .drag-bank { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; padding: 16px; border: 1px dashed var(--border); border-radius: 8px; min-height: 50px; background: rgba(0,0,0,0.1); }
   
-  /* CRITICAL FIX FOR HYBRID DRAGGING/TAPPING */
   .drag-item { 
     background: var(--surface); border: 1px solid var(--accent); color: var(--text); 
     padding: 8px 16px; border-radius: 6px; cursor: pointer; display: inline-block;
@@ -188,26 +187,41 @@
   .nav-btn.primary:hover:not(:disabled) { background: var(--accent-hover); box-shadow: 0 0 12px var(--accent-light); }
 
   /* RESULTS SCREEN */
-  .results-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 50px 30px; text-align: center; }
+  .results-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 50px 30px; text-align: center; margin: 0 auto; max-width: 600px; animation: slideUpFade 0.4s ease; }
   .res-pct { font-size: 4.5rem; font-weight: 700; }
 
   .watermark { position: fixed; bottom: 12px; right: 18px; font-size: 0.75rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; opacity: 0.4; pointer-events: none; z-index: 1000; }
+
+  /* === NEW READER SCREEN STYLES === */
+  #readerScreen {
+    display: none; 
+    max-width: 900px; 
+    margin: 40px auto; 
+    padding: 40px; 
+    background: var(--surface); 
+    border: 1px solid var(--border); 
+    border-radius: 12px; 
+    line-height: 1.8; 
+    animation: slideUpFade 0.4s ease;
+  }
+  #readerTitle { color: var(--accent); margin-bottom: 20px; font-size: 1.8rem; text-align: center; }
+  #readerContent { font-size: 1rem; color: var(--text); padding-bottom: 30px; border-bottom: 1px solid var(--border); }
+
 
   /* === STRICT MOBILE OPTIMIZATION === */
   @media (max-width: 768px) {
     #quizScreen { 
       flex-direction: column; 
-      align-items: stretch; /* Prevents flex children from overflowing width */
+      align-items: stretch; 
       padding: 10px; 
       width: 100%; 
-      max-width: 100%; /* Strictly bound to screen */
+      max-width: 100%; 
       box-sizing: border-box; 
       overflow-x: hidden; 
     } 
     
-    .sidebar { display: none; } /* Hides desktop sidebar */
+    .sidebar { display: none !important; } /* Force hide sidebar on mobile */
     
-    /* Safely contained mobile navigator */
     .mobile-nav-container { 
       display: block; 
       background: var(--surface); 
@@ -222,10 +236,10 @@
     }
     .mobile-q-grid { 
       display: flex; 
-      flex-wrap: nowrap; /* Forces a single horizontal line */
+      flex-wrap: nowrap; 
       gap: 8px; 
-      overflow-x: auto; /* ONLY the inside of this box can scroll */
-      -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+      overflow-x: auto; 
+      -webkit-overflow-scrolling: touch; 
       padding-bottom: 8px; 
       width: 100%; 
       box-sizing: border-box;
@@ -236,7 +250,7 @@
     .q-card { padding: 20px 14px; width: 100%; max-width: 100%; box-sizing: border-box; overflow-x: hidden; }
     .topbar { padding: 12px 16px; }
     .topbar-title { font-size: 0.9rem; }
-    #backBtn { font-size: 0.75rem; padding: 5px 8px; margin-right: 8px; }
+    #backBtn { display: block !important; font-size: 0.75rem; padding: 5px 8px; margin-right: 8px; }
     .stat-pill { font-size: 0.7rem; padding: 4px 10px; }
     .choice-btn { padding: 12px; font-size: 0.8rem; }
     .nav-btn { padding: 12px; flex: 1; text-align: center; }
@@ -251,6 +265,15 @@
     
     .splash-title { font-size: 1.8rem; }
     .splash-subtitle { font-size: 0.75rem; padding: 0 10px; }
+
+    /* Fix Reader Screen for Mobile */
+    #readerScreen {
+      margin: 15px;
+      padding: 20px;
+      width: calc(100% - 30px);
+      box-sizing: border-box;
+    }
+    #readerTitle { font-size: 1.4rem; }
   }
 </style>
 </head>
@@ -264,7 +287,7 @@
 
 <div class="topbar">
   <div class="topbar-left">
-    <button id="backBtn" onclick="exitQuiz()">← Back</button>
+    <button id="backBtn" onclick="goBack()">← Back</button>
     <div>
       <div class="topbar-title" onclick="showHome()">Reviewer Dashboard</div>
       <div class="topbar-sub" id="topbarSub">powered by boredom</div>
@@ -278,10 +301,21 @@
 
 <div id="homeScreen">
   <div class="home-header">
-    <h1>Welcome Learner!</h1>
-    <p>Select a practice module to begin your review.</p>
+    <h1 id="homeTitle">Welcome Learner!</h1>
+    <p id="homeDesc">Select a practice module to begin your review.</p>
   </div>
   <div class="quiz-grid" id="quizGrid"></div>
+</div>
+
+<!-- READING MODE SCREEN -->
+<div id="readerScreen">
+  <h2 id="readerTitle">Title</h2>
+  <div id="readerContent"></div>
+  
+  <div style="margin-top: 30px; text-align: center;">
+    <p style="color: var(--muted); margin-bottom: 15px; font-size: 0.9rem;">Finished reading? Test your knowledge!</p>
+    <button class="nav-btn primary" id="readerStartQuizBtn" style="padding: 12px 30px; font-size: 1.1rem; cursor: pointer;">📝 Take Exam Now</button>
+  </div>
 </div>
 
 <div id="quizScreen">
@@ -331,11 +365,17 @@ let timeRemaining = 0;
 function initMenu() {
   const grid = document.getElementById('quizGrid');
   const topbarSub = document.getElementById('topbarSub');
+  const backBtn = document.getElementById('backBtn');
   grid.innerHTML = '';
 
-  // 1. SUBJECT SELECTION
+  // 1. SUBJECT SELECTION (TRUE HOME)
   if (currentView === 'subjects') {
-    topbarSub.textContent = "powered by boredom"; // Set custom subheading on main screen
+    topbarSub.textContent = "powered by boredom"; 
+    backBtn.style.display = 'none'; // Hide back button on the very first screen
+    
+    document.getElementById('homeTitle').textContent = "Welcome Learner!";
+    document.getElementById('homeDesc').textContent = "Select a subject to begin your review.";
+
     const subjects = [...new Set(Object.values(quizDB).map(q => q.subject || "General"))];
     
     subjects.forEach(sub => {
@@ -350,7 +390,10 @@ function initMenu() {
   // 2. YEAR LEVEL SELECTION
   else if (currentView === 'years') {
     topbarSub.textContent = `${selectedSubject} > Select Year`;
-    createBackButton(grid, () => { currentView = 'subjects'; initMenu(); });
+    backBtn.style.display = 'block'; // Show back button
+    
+    document.getElementById('homeTitle').textContent = selectedSubject;
+    document.getElementById('homeDesc').textContent = "Select a year level or category.";
 
     const years = [...new Set(Object.values(quizDB)
       .filter(q => (q.subject || "General") === selectedSubject)
@@ -365,10 +408,13 @@ function initMenu() {
     });
   }
 
-  // 3. FINAL EXAM LIST (The actual quizzes)
+  // 3. FINAL EXAM LIST
   else if (currentView === 'quizzes') {
     topbarSub.textContent = `${selectedSubject} > ${selectedYear}`;
-    createBackButton(grid, () => { currentView = 'years'; initMenu(); });
+    backBtn.style.display = 'block'; // Show back button
+    
+    document.getElementById('homeTitle').textContent = `${selectedSubject} - ${selectedYear}`;
+    document.getElementById('homeDesc').textContent = "Select a reviewer or exam to begin.";
 
     const filtered = Object.entries(quizDB).filter(([id, q]) => 
       (q.subject || "General") === selectedSubject && 
@@ -378,12 +424,17 @@ function initMenu() {
     filtered.forEach(([key, data]) => {
       const card = document.createElement('div');
       card.className = 'quiz-card-menu';
-      card.onclick = () => startQuiz(key);
+      
       card.innerHTML = `
         <div class="quiz-icon">📝</div>
         <div class="quiz-title">${esc(data.title)}</div>
         <div class="quiz-meta">${data.questions.length} Items</div>
-        <div style="font-size: 0.85rem; color: var(--muted); margin-top: 8px;">${esc(data.description)}</div>
+        <div style="font-size: 0.85rem; color: var(--muted); margin-top: 8px; margin-bottom: 15px; flex-grow: 1;">${esc(data.description)}</div>
+        
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+          ${data.reviewerContent ? `<button class="nav-btn" onclick="showReader('${key}')" style="flex:1; padding: 8px; font-size:0.8rem; background: var(--bg);">📖 Read</button>` : ''}
+          <button class="nav-btn primary" onclick="startQuiz('${key}')" style="flex:1; padding: 8px; font-size:0.8rem;">📝 Exam</button>
+        </div>
       `;
       grid.appendChild(card);
     });
@@ -401,45 +452,79 @@ function createCategoryCard(container, title, icon, onClick) {
   container.appendChild(card);
 }
 
-function createBackButton(container, onClick) {
-  const btn = document.createElement('div');
-  btn.className = 'quiz-card-menu';
-  btn.style.borderStyle = 'dashed';
-  btn.onclick = onClick;
-  btn.innerHTML = `<div class="quiz-title" style="color:var(--muted)">← Go Back</div>`;
-  container.prepend(btn);
+// SMART UNIVERSAL BACK BUTTON
+function goBack() {
+  // 1. If inside a quiz answering questions OR looking at the results screen
+  if (activeQuizKey !== null) {
+    clearInterval(timerInterval);
+    document.getElementById('timerLabel').style.display = 'none';
+    document.getElementById('quizScreen').style.display = 'none';
+    document.getElementById('homeScreen').style.display = 'block';
+    document.getElementById('scoreLabel').style.display = 'none';
+    
+    activeQuizKey = null;
+    currentView = 'quizzes'; // Force it back to the exam list menu
+    initMenu(); 
+    return;
+  }
+
+  // 2. If looking at the reading material
+  if (currentView === 'reader') {
+    document.getElementById('readerScreen').style.display = 'none';
+    document.getElementById('homeScreen').style.display = 'block';
+    currentView = 'quizzes';
+    initMenu();
+    return;
+  }
+  
+  // 3. Normal menu navigation back
+  if (currentView === 'quizzes') {
+    currentView = 'years';
+    initMenu();
+    return;
+  }
+  
+  if (currentView === 'years') {
+    currentView = 'subjects';
+    initMenu();
+    return;
+  }
 }
 
-// Resets everything and goes back to the very beginning
+// HARD RESET TO HOME
 function showHome() {
   clearInterval(timerInterval);
   
-  // Reset Navigation Breadcrumbs
   currentView = 'subjects';
   selectedSubject = null;
   selectedYear = null;
+  activeQuizKey = null;
 
   document.getElementById('timerLabel').style.display = 'none';
   document.getElementById('quizScreen').style.display = 'none';
   document.getElementById('homeScreen').style.display = 'block';
   document.getElementById('scoreLabel').style.display = 'none';
-  document.getElementById('backBtn').style.display = 'none';
-  activeQuizKey = null;
+  
   initMenu();
 }
 
-// Exits the quiz but drops you back in the same folder
-function exitQuiz() {
-  clearInterval(timerInterval);
-  
-  document.getElementById('timerLabel').style.display = 'none';
+function showReader(key) {
+  document.getElementById('homeScreen').style.display = 'none';
   document.getElementById('quizScreen').style.display = 'none';
-  document.getElementById('homeScreen').style.display = 'block';
-  document.getElementById('scoreLabel').style.display = 'none';
-  document.getElementById('backBtn').style.display = 'none';
+  document.getElementById('readerScreen').style.display = 'block';
+  document.getElementById('backBtn').style.display = 'block';
+  document.getElementById('topbarSub').textContent = "Reading Mode";
+
+  document.getElementById('readerTitle').textContent = quizDB[key].title + " - Reviewer";
+  document.getElementById('readerContent').innerHTML = quizDB[key].reviewerContent;
+
+  // Link the big button at the bottom to the specific quiz
+  document.getElementById('readerStartQuizBtn').onclick = () => {
+    document.getElementById('readerScreen').style.display = 'none';
+    startQuiz(key);
+  };
   
-  activeQuizKey = null;
-  initMenu(); // Re-loads the quizzes menu since currentView is still 'quizzes'
+  currentView = 'reader'; 
 }
 
 function startQuiz(key) {
@@ -450,6 +535,11 @@ function startQuiz(key) {
   locked = Array(questions.length).fill(false);
   current = 0;
   score = 0;
+  
+  // Make sure the navigator and progress bar are visible when starting a new quiz
+  document.querySelector('.sidebar').style.display = ''; 
+  document.querySelector('.mobile-nav-container').style.display = ''; 
+  document.querySelector('.prog-row').style.display = 'flex';
   
   document.getElementById('homeScreen').style.display = 'none';
   document.getElementById('quizScreen').style.display = 'flex';
@@ -559,7 +649,6 @@ function render(){
 
   let interactionHTML = '';
 
-  // 1. MULTIPLE CHOICE
   if (q.type === 'mcq') {
     interactionHTML = '<div class="choices">';
     for (let i = 0; i < q.choices.length; i++) {
@@ -574,7 +663,6 @@ function render(){
     interactionHTML += '</div>';
   } 
   
-  // 2. MULTIPLE SELECT
   else if (q.type === 'msq') {
     if(!state[current]) state[current] = [];
     interactionHTML = '<div class="choices">';
@@ -596,7 +684,6 @@ function render(){
     if(!isLocked) interactionHTML += `<button class="submit-ans-btn" onclick="submitComplex()">Submit Answer</button>`;
   }
 
-  // 3. TEXT
   else if (q.type === 'text') {
     let val = state[current] || '';
     interactionHTML = `<input type="text" class="text-ans-input" placeholder="Type your answer here..." value="${esc(val)}" oninput="state[current]=this.value" ${isLocked ? 'disabled' : ''}>`;
@@ -608,7 +695,6 @@ function render(){
     }
   }
 
-  // 4. DROPDOWN
   else if (q.type === 'dropdown') {
     if(!state[current]) state[current] = Array(q.options.length).fill('');
     let content = q.text || q.code;
@@ -635,15 +721,12 @@ function render(){
     }
   }
 
-  // 5. DRAG AND DROP (HYBRID: DRAG OR TAP)
   else if (q.type === 'dragdrop') {
     if(!state[current]) state[current] = Array((q.text || q.code).split('[ZONE]').length - 1).fill('');
     
     let bankHTML = `<div class="drag-bank">`;
     q.draggables.forEach(item => {
       let isSelected = (window.activeDragWord === item) ? 'box-shadow: 0 0 12px var(--accent); border-color: var(--accent); background: var(--accent-light);' : '';
-      
-      // ALL devices get BOTH drag and tap
       bankHTML += `<div class="drag-item" style="${isSelected}" draggable="${!isLocked}" ondragstart="event.dataTransfer.setData('text/plain', '${item}')" onclick="if(!${isLocked}) selectDragWord('${item}')">${esc(item)}</div>`;
     });
     bankHTML += `</div>`;
@@ -657,8 +740,6 @@ function render(){
         let filledText = state[current][i] !== '' ? esc(state[current][i]) : 'Drop Here';
         let filledCls = state[current][i] !== '' ? 'filled' : '';
         let disabledCls = isLocked ? 'disabled' : '';
-        
-        // ALL devices get BOTH drop and tap
         builtHTML += `<span class="drop-zone ${filledCls} ${disabledCls}" style="cursor:pointer;" ondragover="event.preventDefault()" ondrop="event.preventDefault(); let d = event.dataTransfer.getData('text/plain'); if(d && !${isLocked}) { window.activeDragWord = null; updateDragDrop(${i}, d); }" onclick="if(!${isLocked}) handleZoneTap(${i})">${filledText}</span>`;
       }
     }
@@ -749,7 +830,6 @@ function updateDragDrop(idx, val) {
   render();
 }
 
-// --- NEW SMART MOBILE HANDLERS ---
 function selectDragWord(word) {
   if(locked[current]) return;
   window.activeDragWord = word;
@@ -784,8 +864,13 @@ function submitComplex() {
 function showResults() {
   clearInterval(timerInterval);
   document.getElementById('timerLabel').style.display = 'none';
-  const pct = Math.round((score / questions.length) * 100);
   
+  // THIS HIDES THE SIDEBARS AND PROGRESS BAR SO IT LOOKS CENTERED!
+  document.querySelector('.sidebar').style.display = 'none';
+  document.querySelector('.mobile-nav-container').style.display = 'none';
+  document.querySelector('.prog-row').style.display = 'none';
+  
+  const pct = Math.round((score / questions.length) * 100);
   let pctColor = pct >= 75 ? 'var(--green)' : pct >= 50 ? 'var(--orange)' : 'var(--red)';
   let message = pct >= 75 ? "🔥 Excellent work!" : pct >= 50 ? "👍 Good effort, review your mistakes." : "📚 Time to hit the books again.";
 
@@ -795,7 +880,7 @@ function showResults() {
       <div style="font-size: 1.2rem; font-weight: 600; margin-top: 10px;">${message}</div>
       <div style="color: var(--muted); margin: 10px 0 30px;">${score} correct out of ${questions.length}</div>
       <button class="nav-btn primary" onclick="startQuiz(activeQuizKey)">↺ Restart Exam</button>
-      <button class="nav-btn" style="margin-left: 10px;" onclick="exitQuiz()">⌂ Back to Menu</button>
+      <button class="nav-btn" style="margin-left: 10px;" onclick="goBack()">⌂ Back to Menu</button>
     </div>`;
 }
 

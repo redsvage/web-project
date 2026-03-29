@@ -519,5 +519,604 @@ const quizDB = {
       { type: 'mcq', q: 'What is the relationship between the eccentricity (e) and the shape of a conic section?', code: null, choices: ['A. e = 0 is a line, e = 1 is a circle.', 'B. e < 1 is an ellipse, e = 1 is a parabola, e > 1 is a hyperbola.', 'C. e < 1 is a hyperbola, e = 1 is an ellipse, e > 1 is a parabola.', 'D. e = 1 is an ellipse, e > 1 is a circle.'], answer: 1, explanation: 'B is correct. The eccentricity defines the "openness" of the conic. e=0 is a circle, 0<e<1 is an ellipse, e=1 is a parabola, and e>1 is a hyperbola.' }
     ]
   },
+"rev8": {
+    subject: "Understanding the Self",
+    yearLevel: "1st Year",
+    title: "GE 1: Philosophical Perspectives",
+    description: "Read the reviewer before taking the exam!",
+    hasTimer: false,
+    
+    // 1. ADD THIS PROPERTY AND OPEN THE BACKTICK
+   reviewerContent: `
+    <div style="font-family: 'Inter', sans-serif; padding-bottom: 20px;">
+      
+      <h2 style="color: var(--text); text-align: center; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 2px solid var(--border);">GE 1: Understanding the Self - First Exam Reviewer</h2>
 
+      <h3 style="color: var(--accent); margin-bottom: 10px;">PART 1: The Western Philosophers</h3>
+      <p style="color: var(--muted); font-style: italic; margin-bottom: 20px; font-size: 0.9rem;">Western philosophy usually views the "self" as an individual, distinct, and logical entity.</p>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">1. Socrates</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> "Know Thyself."</li>
+          <li><b>Key Concept:</b> He believed the true task of a philosopher is to know oneself. He introduced <b>Dualism</b>—the idea that every human is made of two parts: an imperfect, mortal Body, and a perfect, immortal Soul.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">2. Plato (Student of Socrates)</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> The soul is the essence of the self.</li>
+          <li><b>Key Concept:</b> He believed the soul has three parts:
+            <ul style="margin-left: 20px; margin-top: 5px; list-style-type: circle;">
+              <li><b>Rational Soul:</b> The part that thinks and uses logic (located in the head).</li>
+              <li><b>Spirited Soul:</b> The part that handles emotions and passions (located in the chest).</li>
+              <li><b>Appetitive Soul:</b> The part driven by basic human desires like eating and sleeping (located in the stomach).</li>
+            </ul>
+          </li>
+          <li style="margin-top: 5px; color: var(--muted);"><i>Note: A healthy self happens when the Rational Soul is in control of the other two.</i></li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">3. St. Augustine</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> The self is defined by its relationship to God.</li>
+          <li><b>Key Concept:</b> He combined Plato’s ideas with Christianity. He believed the body is bound to die on earth, but the soul can anticipate living eternally in communion with God.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">4. Rene Descartes (Father of Modern Philosophy)</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> "Cogito ergo sum" (I think, therefore I am).</li>
+          <li><b>Key Concept:</b> You can doubt everything in the world, but you cannot doubt that you are thinking. If you are thinking, you must exist. He divided the self into the mind (the thinking thing) and the body (the physical machine).</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">5. John Locke</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> The self is built on memory and experiences.</li>
+          <li><b>Key Concept:</b> He introduced the <b>"Tabula Rasa"</b> (Blank Slate). He believed we are born with an empty mind, and our identity is formed by our personal memories and experiences over time.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">6. David Hume</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> There is NO "self."</li>
+          <li><b>Key Concept:</b> As an empiricist, Hume argued that what we call the "self" is just a "bundle of perceptions." It is an illusion created by our brain stringing together different feelings and memories.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">7. Immanuel Kant</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> The self is the organizer of the mind.</li>
+          <li><b>Key Concept:</b> Kant argued against Hume. He said that for us to experience the world, there must be a "self" that organizes all our scattered thoughts and perceptions into a unified experience.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">8. Sigmund Freud</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> The self is multi-layered and driven by the unconscious.</li>
+          <li><b>Key Concept:</b> He divided the mind into three levels (Conscious, Preconscious, Unconscious) and the personality into three parts:
+            <ul style="margin-left: 20px; margin-top: 5px; list-style-type: circle;">
+              <li><b>Id:</b> The primitive, pleasure-seeking part (wants what it wants right now).</li>
+              <li><b>Ego:</b> The realistic part that tries to balance the Id and reality.</li>
+              <li><b>Superego:</b> The moral compass or conscience learned from society.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">9. Gilbert Ryle</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> The self is just human behavior.</li>
+          <li><b>Key Concept:</b> He mocked Descartes' dualism, calling it the "Ghost in the Machine." Ryle believed the "self" isn't a hidden entity inside you; it is simply defined by how you act and behave in the real world.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">10. Paul Churchland</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> The self is the brain.</li>
+          <li><b>Key Concept:</b> <b>Eliminative Materialism.</b> He believed that as neuroscience improves, we will realize that psychological terms like "beliefs" and "desires" are just physical brain states. If the brain is altered, the self is altered.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">11. Maurice Merleau-Ponty</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Idea:</b> The mind and body cannot be separated.</li>
+          <li><b>Key Concept:</b> <b>Phenomenology.</b> He argued against dualism, stating that the mind and body are so intertwined that they are one. You experience the world through your "lived body."</li>
+        </ul>
+      </div>
+
+      <h3 style="color: var(--accent); margin-bottom: 15px; padding-bottom: 5px; border-bottom: 1px solid var(--border);">PART 2: Eastern vs. Western Perspectives</h3>
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 0.9rem; text-align: left; background: rgba(0,0,0,0.2); border-radius: 8px; overflow: hidden;">
+        <thead>
+          <tr style="background: var(--surface); color: var(--accent);">
+            <th style="padding: 12px; border: 1px solid var(--border);">Feature</th>
+            <th style="padding: 12px; border: 1px solid var(--border);">Western Thought</th>
+            <th style="padding: 12px; border: 1px solid var(--border);">Eastern Thought</th>
+          </tr>
+        </thead>
+        <tbody style="color: var(--text);">
+          <tr>
+            <td style="padding: 12px; border: 1px solid var(--border); font-weight: 600;">View of the Self</td>
+            <td style="padding: 12px; border: 1px solid var(--border);">Individualistic (The self is distinct and independent).</td>
+            <td style="padding: 12px; border: 1px solid var(--border);">Collectivistic (The self is connected to everyone and nature).</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid var(--border); font-weight: 600;">Values</td>
+            <td style="padding: 12px; border: 1px solid var(--border);">Autonomy, logic, self-expression, competition.</td>
+            <td style="padding: 12px; border: 1px solid var(--border);">Harmony, relationships, duty, community.</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid var(--border); font-weight: 600;">Goal</td>
+            <td style="padding: 12px; border: 1px solid var(--border);">To find one's true, unique self.</td>
+            <td style="padding: 12px; border: 1px solid var(--border);">To let go of the ego and achieve harmony.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: var(--accent); margin-bottom: 15px;">PART 3: Eastern Philosophies of the Self</h3>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">1. Hinduism</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Concept:</b> The true self is the <b>Atman</b> (soul). The ultimate goal is for the Atman to realize it is one with Brahman (the absolute, universal reality).</li>
+          <li><b>Key Idea:</b> The law of Karma dictates that your actions determine your destiny in the cycle of rebirth (reincarnation).</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">2. Buddhism</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Concept:</b> <b>Anatman</b> (The No-Self).</li>
+          <li><b>Key Idea:</b> Buddhism teaches that the idea of a permanent "self" is an illusion that causes suffering. The self is just a temporary combination of five components (skandhas). The goal is to reach Nirvana (extinguishing the illusion of self).</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">3. Confucianism</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Concept:</b> The <b>Relational Self</b>.</li>
+          <li><b>Key Idea:</b> Your identity is not defined by who you are alone, but by your relationships with others (e.g., child to parent, student to teacher). It emphasizes Filial Piety (respect for elders/ancestors) and social harmony.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--accent);">
+        <h4 style="margin-bottom: 8px; color: #fff;">4. Taoism (Daoism)</h4>
+        <ul style="margin-left: 20px; line-height: 1.6; color: var(--text); font-size: 0.9rem;">
+          <li><b>Core Concept:</b> The self is an extension of the cosmos.</li>
+          <li><b>Key Idea:</b> It focuses on living in harmony with the Tao (The Way or the flow of the universe). It emphasizes Wu-wei (effortless action or "going with the flow") and the balance of opposites (Yin and Yang).</li>
+        </ul>
+      </div>
+
+      <div style="background: var(--orange-light); padding: 15px; border-radius: 8px; margin-top: 30px; border-left: 4px solid var(--orange);">
+        <h4 style="margin-bottom: 8px; color: var(--orange);">Study Tip:</h4>
+        <p style="color: var(--text); line-height: 1.6; font-size: 0.9rem; margin: 0;">When taking the exam, look for keywords! If a question mentions <b>"Blank Slate,"</b> immediately think of <b>Locke</b>. If it mentions <b>"No-Self,"</b> think of <b>Buddhism</b>. If it mentions the <b>"Ghost in the Machine,"</b> it's <b>Ryle</b>.</p>
+      </div>
+
+    </div>
+    `,
+    questions: [
+      // --- ANCIENT & MEDIEVAL PHILOSOPHY ---
+      { 
+        type: 'mcq', 
+        q: 'Socrates argued that "the unexamined life is not worth living." Based on his concept of dualism, which of the following best represents an "examined life"?', 
+        code: null, 
+        choices: ['A. Prioritizing the satisfaction of physical desires to maintain a healthy body.', 'B. Focusing entirely on the Rational Soul to suppress all emotions.', 'C. Engaging in constant self-reflection and prioritizing the perfection of the immortal soul over the mortal body.', 'D. Accepting that the self is an illusion and seeking harmony with the cosmos.'], 
+        answer: 2, 
+        explanation: 'Socrates believed the body is temporary and imperfect, while the soul is immortal. An examined life prioritizes wisdom, virtue, and the perfection of the soul over physical or worldly desires.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A student is tempted to cheat on an exam to keep their scholarship but decides not to because they know it is morally wrong. According to Plato\'s tripartite theory of the soul, which part of the soul won this internal conflict?', 
+        code: null, 
+        choices: ['A. The Rational Soul', 'B. The Spirited Soul', 'C. The Appetitive Soul', 'D. The Preconscious Ego'], 
+        answer: 0, 
+        explanation: 'Plato\'s Rational Soul (located in the head) governs intellect, reason, and moral judgment. It kept the Appetitive Soul (desire for the scholarship) and Spirited Soul (fear of failing) in check.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'St. Augustine heavily integrated Platonic dualism into Christian theology. How did his view of the "body" differ from pure Platonism?', 
+        code: null, 
+        choices: ['A. He believed the body was equal in perfection to the soul.', 'B. He believed the body is inherently evil and must be punished.', 'C. He viewed the body as a "spouse" to the soul, imperfect but meant to be united with it, rather than just a prison.', 'D. He believed the body and soul were the exact same physical entity.'], 
+        answer: 2, 
+        explanation: 'While Augustine agreed the soul is superior, he viewed the body not merely as a prison (as Plato sometimes did), but as God\'s creation, meant to be united with the soul in the resurrection.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'According to St. Thomas Aquinas (who adapted Aristotle), man is composed of "Matter" (Hyle) and "Form" (Morphe). In this framework, what is the "Form" of a human being?', 
+        code: null, 
+        choices: ['A. The physical cells and bones.', 'B. The human soul.', 'C. The external environment.', 'D. The accumulated memories.'], 
+        answer: 1, 
+        explanation: 'For Aquinas and Aristotle, "Matter" is the physical stuff, but "Form" is the essence that makes a thing what it is. The soul is the "Form" of the human body.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'If Socrates were to critique David Hume\'s philosophy of the self, what would be his primary argument?', 
+        code: null, 
+        choices: ['A. Hume relies too much on the existence of a continuous, immortal soul.', 'B. Hume wrongly assumes that physical actions define the self.', 'C. Hume fails to recognize that without an immortal, unified soul, moral accountability and the "examined life" become meaningless.', 'D. Hume focuses too much on God as the center of the self.'], 
+        answer: 2, 
+        explanation: 'Socrates\' entire philosophy rests on cultivating a permanent, immortal soul. He would strongly reject Hume\'s idea that the self is just a temporary, disconnected "bundle of perceptions" because it undermines moral persistence.' 
+      },
+
+      // --- MODERN PHILOSOPHY (Descartes, Locke, Hume, Kant) ---
+      { 
+        type: 'mcq', 
+        q: 'Rene Descartes employed "Methodic Doubt" to arrive at his foundational truth: "Cogito ergo sum." What is the strict philosophical implication of this statement?', 
+        code: null, 
+        choices: ['A. The physical body must exist because we can feel pain.', 'B. The act of doubting proves the existence of a "doubter" or a thinking entity.', 'C. All empirical knowledge gathered through the senses is 100% accurate.', 'D. The mind is a blank slate at birth.'], 
+        answer: 1, 
+        explanation: 'Descartes stripped away everything he could possibly doubt (including his own body). But he realized he could not doubt that he was doubting. Doubting is a form of thinking, thus a thinking entity (the mind) must exist.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A man suffers severe amnesia and completely loses all memories of his past life, adopting a completely new personality. According to John Locke\'s theory of Personal Identity, what is the status of this man?', 
+        code: null, 
+        choices: ['A. He is the exact same person because his physical body is the same.', 'B. He is a completely different person because his psychological continuity and memory are broken.', 'C. He is the same person because his immortal soul remains unchanged.', 'D. He has lost his Rational Soul but retained his Spirited Soul.'], 
+        answer: 1, 
+        explanation: 'Locke argued that personal identity is founded entirely on consciousness and memory. If the chain of memory is completely severed, the original "person" ceases to exist in that body.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'David Hume argued that the "self" is an illusion. Which of the following best demonstrates Hume\'s reasoning?', 
+        code: null, 
+        choices: ['A. When you introspect, you only observe specific feelings (heat, cold, anger, joy), never a single, unified "self" experiencing them.', 'B. The self cannot exist because the brain is purely a physical machine.', 'C. The self is just a linguistic error made by society.', 'D. The self is heavily suppressed by the Superego.'], 
+        answer: 0, 
+        explanation: 'Hume was an empiricist. He stated that if you look inside your mind, you only catch fleeting, distinct perceptions. Because you can never observe a constant "self" holding them together, he concluded the self does not exist.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Immanuel Kant reconciled the debate between empiricists (like Hume) and rationalists (like Descartes). How did Kant explain the existence of the self?', 
+        code: null, 
+        choices: ['A. The self is merely a bundle of physical behaviors.', 'B. The self is a blank slate written upon by the environment.', 'C. The self is a "Transcendental Apperception"—an active, organizing principle that synthesizes raw sensory data into a coherent experience.', 'D. The self exists only because God constantly observes it.'], 
+        answer: 2, 
+        explanation: 'Kant argued against Hume by stating that raw perceptions would be chaotic without an underlying "self" to organize them. The mind actively structures reality using innate categories.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'If John Locke and Rene Descartes debated the origin of knowledge, what would be their main point of contention?', 
+        code: null, 
+        choices: ['A. Locke believes the mind and body are one; Descartes believes they are separate.', 'B. Descartes believes in innate ideas present at birth; Locke believes the mind is a Tabula Rasa (blank slate).', 'C. Locke believes the self is an illusion; Descartes believes it is immortal.', 'D. Descartes relies on the senses; Locke relies on mathematical logic.'], 
+        answer: 1, 
+        explanation: 'Descartes (a rationalist) believed certain ideas are innate and placed in us by God. Locke (an empiricist) rejected innate ideas, arguing all knowledge comes from experience acting upon a blank slate.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'According to Kant, what is the difference between the "empirical self" and the "transcendental self"?', 
+        code: null, 
+        choices: ['A. The empirical self is the soul; the transcendental self is the body.', 'B. The empirical self is our everyday, observable personality; the transcendental self is the hidden organizer that makes observation possible.', 'C. The empirical self is ruled by the Id; the transcendental self is ruled by the Superego.', 'D. The empirical self is our online identity; the transcendental self is our physical body.'], 
+        answer: 1, 
+        explanation: 'Kant divided the self into the empirical (the psychological behaviors and traits we can observe) and the transcendental (the underlying structural framework of consciousness that we cannot directly see).' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Which of the following scenarios best illustrates David Hume’s "Bundle Theory"?', 
+        code: null, 
+        choices: ['A. A student studying hard to achieve a unified goal.', 'B. A movie composed of thousands of individual static frames played rapidly to create the illusion of continuous motion.', 'C. A computer relying on its central processor to dictate tasks.', 'D. A driver steering a horse-drawn chariot.'], 
+        answer: 1, 
+        explanation: 'Hume believed the "self" is just a rapid succession of different perceptions. Just like a movie is an illusion of motion created by distinct frames, the self is an illusion created by rapid, distinct thoughts.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Descartes\' Dualism creates the "Mind-Body Problem." What is the central question of this philosophical problem?', 
+        code: null, 
+        choices: ['A. How can the mind be a blank slate if the body has genetic instincts?', 'B. How can an immaterial, unextended mind interact with and move a physical, extended body?', 'C. Why does the mind degrade when the physical brain takes damage?', 'D. How can the soul be immortal if the body requires food?'], 
+        answer: 1, 
+        explanation: 'If the mind is purely spiritual (no mass, no space) and the body is purely physical, philosophers struggled to explain how a non-physical thought could cause a physical arm to raise.' 
+      },
+
+      // --- POST-MODERN / CONTEMPORARY PHILOSOPHY ---
+      { 
+        type: 'mcq', 
+        q: 'According to Sigmund Freud, a person who impulsively buys expensive things they cannot afford and constantly seeks immediate gratification is being overly dominated by which part of their psyche?', 
+        code: null, 
+        choices: ['A. The Ego', 'B. The Superego', 'C. The Id', 'D. The Rational Soul'], 
+        answer: 2, 
+        explanation: 'The Id operates on the "Pleasure Principle," seeking instant gratification of primitive desires without regard for consequences or reality.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'In Freud\'s structural model, what is the primary function of the Ego?', 
+        code: null, 
+        choices: ['A. To enforce strict moral perfection and guilt.', 'B. To act as a mediator, satisfying the Id\'s desires in a socially acceptable and realistic way.', 'C. To repress all desires and achieve a state of emotional emptiness.', 'D. To organize sensory data into transcendental categories.'], 
+        answer: 1, 
+        explanation: 'The Ego operates on the "Reality Principle." It attempts to fulfill the primal urges of the Id without violating the moral constraints of the Superego or the rules of the real world.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Gilbert Ryle heavily criticized Descartes\' dualism. How did Ryle redefine the concept of the "mind"?', 
+        code: null, 
+        choices: ['A. The mind is a network of neurons firing in the brain.', 'B. The mind is an illusion created by societal expectations.', 'C. The mind is not a separate entity, but rather a category of observable behaviors and dispositions to act in certain ways.', 'D. The mind is the spiritual extension of the physical body.'], 
+        answer: 2, 
+        explanation: 'Ryle was a logical behaviorist. He argued that having a "mind" just means demonstrating intelligent behavior. You don\'t have a hidden entity inside you; your actions ARE your mind.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Paul Churchland champions "Eliminative Materialism." Under this view, what will eventually happen to concepts like "love," "sadness," and "beliefs"?', 
+        code: null, 
+        choices: ['A. They will be proven to be functions of the immortal soul.', 'B. They will be eliminated from our vocabulary and replaced by exact neurobiological terms (e.g., specific neural firings).', 'C. They will be recognized as the only true reality, eliminating the physical world.', 'D. They will be merged into a single universal consciousness.'], 
+        answer: 1, 
+        explanation: 'Churchland argues that "folk psychology" (everyday emotional terms) is a false scientific theory. As neuroscience advances, we will stop saying "I feel sad" and start saying "My serotonin levels have dropped."' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Maurice Merleau-Ponty\'s concept of "Phenomenology" argues against the mind-body split by introducing the concept of the "lived body." What does this mean?', 
+        code: null, 
+        choices: ['A. The body is just a vessel that the mind pilots like a ship.', 'B. The mind and body are an inextricably intertwined unity; we experience the world not just as a mind, but through our bodily engagement with it.', 'C. The body is an illusion, and only the phenomenological mind exists.', 'D. The self is defined purely by external social interactions.'], 
+        answer: 1, 
+        explanation: 'Merleau-Ponty rejected dualism entirely. He stated that you do not "have" a body; you "are" your body. Your perception of the world is entirely filtered through your physical embodiment.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Which philosopher’s perspective aligns most closely with the modern scientific approach to treating mental illness with psychiatric medication (which alters brain chemistry to change personality)?', 
+        code: null, 
+        choices: ['A. Plato', 'B. St. Augustine', 'C. Paul Churchland', 'D. Maurice Merleau-Ponty'], 
+        answer: 2, 
+        explanation: 'Churchland\'s physicalism/materialism posits that the mind IS the brain. Therefore, altering the physical brain chemistry directly alters the "self," which is the foundational logic of modern psychiatry.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A person claims, "I am a kind person because I volunteer at the shelter every weekend." Which philosopher would most enthusiastically agree that this observable action constitutes the self?', 
+        code: null, 
+        choices: ['A. Rene Descartes', 'B. Gilbert Ryle', 'C. Immanuel Kant', 'D. David Hume'], 
+        answer: 1, 
+        explanation: 'Ryle equated the "self" and the "mind" directly with observable behaviors. To Ryle, you are what you do.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Freud compared the human mind to an iceberg. What does the massive, underwater portion of the iceberg represent?', 
+        code: null, 
+        choices: ['A. The Conscious Mind', 'B. The Superego', 'C. The Unconscious Mind', 'D. The Preconscious Mind'], 
+        answer: 2, 
+        explanation: 'Freud believed the vast majority of our drives, traumatic memories, and primal urges are hidden in the Unconscious, which invisibly steers our conscious behavior.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A teenager wants to steal a video game (Id) but fears going to jail (Reality). Their internal voice tells them that stealing is a sin against their family\'s values. This moral voice represents the:', 
+        code: null, 
+        choices: ['A. Id', 'B. Ego', 'C. Superego', 'D. Alter-Ego'], 
+        answer: 2, 
+        explanation: 'The Superego is the internal moral compass, representing the internalized ideals and standards acquired from parents and society.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Merleau-Ponty stated, "I am my body." How does this directly contradict Descartes?', 
+        code: null, 
+        choices: ['A. Descartes believed the body was a permanent entity, while Merleau-Ponty thought it was temporary.', 'B. Descartes separated the self into a "thinking thing" and a "physical machine," whereas Merleau-Ponty argued they are a single, inseparable phenomenon.', 'C. Descartes believed the brain controls the body, but Merleau-Ponty believed the heart controls the body.', 'D. Both actually agreed, but used different terminology.'], 
+        answer: 1, 
+        explanation: 'Descartes is the ultimate dualist (Mind and Body are distinct). Merleau-Ponty is an anti-dualist phenomenologist (Mind and Body are one lived experience).' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Which pair of philosophers both relied on the concept of "empiricism" (knowledge comes through sensory experience) to formulate their theories of the self?', 
+        code: null, 
+        choices: ['A. Descartes and Plato', 'B. Locke and Hume', 'C. Kant and Augustine', 'D. Socrates and Churchland'], 
+        answer: 1, 
+        explanation: 'Both John Locke (Tabula Rasa) and David Hume (Bundle of Perceptions) were British Empiricists who believed sensory experience is the sole foundation of identity.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'If a neurologist scans your brain while you feel "love" and concludes that love is nothing more than oxytocin and dopamine chemical reactions, they are applying the philosophy of:', 
+        code: null, 
+        choices: ['A. Dualism', 'B. Eliminative Materialism', 'C. Phenomenology', 'D. Psychoanalysis'], 
+        answer: 1, 
+        explanation: 'Eliminative Materialism (Churchland) reduces complex human psychological states to pure physical, neurological mechanisms.' 
+      },
+
+      // --- WESTERN VS. EASTERN SYNTHESIS ---
+      { 
+        type: 'mcq', 
+        q: 'A student introduces themselves by saying: "I am John, I am very independent, highly competitive, and my goal is to discover my unique passions." This statement heavily reflects which paradigm?', 
+        code: null, 
+        choices: ['A. Eastern Collectivism', 'B. Western Individualism', 'C. Taoist Harmony', 'D. Buddhist Anatman'], 
+        answer: 1, 
+        explanation: 'Western thought highly values autonomy, uniqueness, logic, and self-expression independent of the group.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A student introduces themselves by saying: "I am Maria, the daughter of Mr. Cruz, a student of UM, and a member of the local choir." This relational description best reflects:', 
+        code: null, 
+        choices: ['A. Western Dualism', 'B. Eliminative Materialism', 'C. Eastern Collectivism', 'D. Methodic Doubt'], 
+        answer: 2, 
+        explanation: 'Eastern philosophy defines the self contextually, based on one\'s relationships, duties, and placement within a larger community.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Which of the following represents the fundamental difference in the ultimate "goal" of the self between Western and Eastern philosophies?', 
+        code: null, 
+        choices: ['A. West seeks to destroy the ego; East seeks to inflate the ego.', 'B. West seeks to integrate with nature; East seeks to conquer nature.', 'C. West seeks self-actualization and individual identity; East seeks to transcend the ego and achieve universal harmony.', 'D. West focuses on reincarnation; East focuses on earthly legacy.'], 
+        answer: 2, 
+        explanation: 'Western philosophy centers on developing a strong, unique, successful individual. Eastern philosophy generally views the individual ego as an obstacle to universal peace and enlightenment.' 
+      },
+
+      // --- EASTERN PHILOSOPHIES (Hinduism, Buddhism, Confucianism, Taoism) ---
+      { 
+        type: 'mcq', 
+        q: 'In Hinduism, what is the relationship between the "Atman" and "Brahman"?', 
+        code: null, 
+        choices: ['A. Atman is the physical body, Brahman is the illusion of the mind.', 'B. Atman is the individual soul, and the ultimate realization is that it is identical to Brahman, the universal soul/reality.', 'C. Atman is the cycle of rebirth, and Brahman is the law of karma.', 'D. They are opposing forces constantly at war.'], 
+        answer: 1, 
+        explanation: 'The core of Hindu philosophy (Vedanta) is that the individual spark of life (Atman) is not separate from the ultimate divine reality (Brahman). Enlightenment is realizing this unity.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A man performs good deeds his entire life in hopes of being reborn into a better life in his next incarnation. Which Hindu concept is he relying on?', 
+        code: null, 
+        choices: ['A. Anatman', 'B. Wu-wei', 'C. Karma', 'D. Filial Piety'], 
+        answer: 2, 
+        explanation: 'Karma is the universal law of cause and effect in Hinduism (and Buddhism), where actions in this life directly dictate the conditions of your rebirth.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Buddhism rejects the Hindu concept of Atman (a permanent soul). Instead, it introduces "Anatman" (No-Self). According to Buddhism, what is the "self" made of?', 
+        code: null, 
+        choices: ['A. A permanent divine spark placed by God.', 'B. The interaction of the Id, Ego, and Superego.', 'C. A temporary amalgamation of five changing aggregates known as the Skandhas.', 'D. Purely biological matter that ceases to exist entirely upon death.'], 
+        answer: 2, 
+        explanation: 'Buddhism teaches that the self is just a temporary grouping of five aggregates (form, feeling, perception, mental formations, consciousness). Because these constantly change, there is no permanent "self."' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'According to the Four Noble Truths of Buddhism, what is the root cause of human suffering (Dukkha)?', 
+        code: null, 
+        choices: ['A. Disobeying one\'s parents.', 'B. Attachment and desire, specifically the clinging to the illusion of a permanent "self."', 'C. Failure to engage in rational, logical debate.', 'D. The separation of the mind and the body.'], 
+        answer: 1, 
+        explanation: 'Because the universe is impermanent (including the self), attempting to cling to desires, ego, or permanence creates friction with reality, resulting in suffering.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Which Eastern philosophy is heavily structured around the "Relational Self," emphasizing societal roles, rituals (Li), and Filial Piety?', 
+        code: null, 
+        choices: ['A. Hinduism', 'B. Taoism', 'C. Confucianism', 'D. Psychoanalysis'], 
+        answer: 2, 
+        explanation: 'Confucianism views the self as a node in a network of relationships. It prioritizes social order, respect for authority and elders, and adherence to societal norms.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'In Confucian thought, what does the concept of "Filial Piety" entail?', 
+        code: null, 
+        choices: ['A. Complete devotion and respect toward one\'s parents and ancestors.', 'B. The practice of effortless action in nature.', 'C. The extinguishing of all worldly desires.', 'D. The pursuit of personal wealth to uplift the family name.'], 
+        answer: 0, 
+        explanation: 'Filial Piety (Xiao) is the foundational virtue in Confucianism, stressing duty, respect, and care for one\'s parents and lineage.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A student facing a highly stressful exam season decides to stop forcing themselves to study in a panicked frenzy, and instead studies calmly only when they feel a natural inclination, trusting the process. This aligns with which Taoist concept?', 
+        code: null, 
+        choices: ['A. Karma', 'B. Wu-wei', 'C. Anatman', 'D. Tabula Rasa'], 
+        answer: 1, 
+        explanation: 'Wu-wei translates to "non-action" or "effortless action." It means acting in harmony with the natural flow of the universe (the Tao) without forcing or straining.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'The symbol of the Yin and Yang in Taoism represents which fundamental truth about the universe and the self?', 
+        code: null, 
+        choices: ['A. The universe is a battleground where light must defeat dark.', 'B. The self is an illusion that must be destroyed.', 'C. Seemingly opposing forces are actually interconnected, interdependent, and balance each other out.', 'D. The body and the mind belong to two entirely different realms of existence.'], 
+        answer: 2, 
+        explanation: 'Taoism embraces the duality of nature. Yin (dark, passive, feminine) and Yang (light, active, masculine) are not enemies; their dynamic balance is the essence of the Tao.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'If David Hume and a Buddhist monk had a conversation about the "self," what would they most likely agree on?', 
+        code: null, 
+        choices: ['A. The soul is immortal and will be reincarnated.', 'B. The concept of a permanent, unified "self" is an illusion fabricated by the mind.', 'C. We must strictly organize society based on familial roles.', 'D. We can only prove our existence through the act of doubting.'], 
+        answer: 1, 
+        explanation: 'Both Hume (Bundle Theory) and Buddhism (Anatman/No-Self) independently reached the conclusion that there is no fixed, permanent entity that we can call the "self."' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'How does the Confucian view of personal growth differ significantly from the Western concept of self-actualization?', 
+        code: null, 
+        choices: ['A. Confucianism aims to achieve heaven; the West aims for earthly wealth.', 'B. Confucianism seeks to erase the self entirely; the West seeks to inflate it.', 'C. Confucianism views personal growth as becoming a better member of society and fulfilling duties to others; the West views it as discovering your own unique, individual path.', 'D. Confucianism relies on biological brain states; the West relies on spirituality.'], 
+        answer: 2, 
+        explanation: 'In Confucianism, a "great person" is one who perfectly executes their relational duties (to parents, state, friends). In the West, a "great person" is often one who breaks the mold and pioneers their own independent identity.' 
+      },
+
+      // --- SYNTHESIS & APPLICATION (High Difficulty) ---
+      { 
+        type: 'mcq', 
+        q: 'Which pairing correctly contrasts a philosopher who believed the self is completely innate/pre-existing with a philosopher who believed the self is entirely learned through experience?', 
+        code: null, 
+        choices: ['A. Descartes vs. Locke', 'B. Hume vs. Ryle', 'C. Kant vs. Merleau-Ponty', 'D. Augustine vs. Aquinas'], 
+        answer: 0, 
+        explanation: 'Descartes believed in innate ideas and an immortal soul that exists prior to experience (Rationalism/Dualism). Locke believed the mind is a Tabula Rasa (Blank Slate) filled only by sensory experience (Empiricism).' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A politician campaigns by stating: "You are solely responsible for your own destiny. Work hard, rely on no one, and build your own empire." Which philosophical tradition is this politician heavily leaning on?', 
+        code: null, 
+        choices: ['A. Buddhism', 'B. Confucianism', 'C. Western Individualism', 'D. Taoism'], 
+        answer: 2, 
+        explanation: 'The heavy emphasis on individual responsibility, autonomy, and personal success disconnected from the community is the hallmark of Western Individualistic philosophy.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Which theory of the self poses the greatest challenge to the concept of the criminal justice system (punishing a person today for a crime they committed 10 years ago)?', 
+        code: null, 
+        choices: ['A. Plato’s Tripartite Soul', 'B. Descartes’ Cogito Ergo Sum', 'C. Hume’s Bundle Theory', 'D. Augustine’s Divine Relationship'], 
+        answer: 2, 
+        explanation: 'If Hume is right and there is no continuous "self"—only a constantly shifting bundle of fleeting perceptions—then the person who committed the crime 10 years ago technically no longer exists. Punishing the current "bundle" becomes philosophically complicated.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A cognitive scientist publishes a paper claiming, "We must stop talking about the \'subconscious\' and \'ego\', and instead map the exact synaptic pathways of the prefrontal cortex." Which two philosophers are in direct conflict in this scenario?', 
+        code: null, 
+        choices: ['A. Freud vs. Churchland', 'B. Locke vs. Hume', 'C. Socrates vs. Plato', 'D. Kant vs. Ryle'], 
+        answer: 0, 
+        explanation: 'Freud relies heavily on "folk psychology" structures (Ego, Id, Unconscious). Churchland (Eliminative Materialism) wants to eliminate those exact terms in favor of pure neuroscience.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'In the context of Eastern philosophy, what is the ultimate danger of Western Individualism?', 
+        code: null, 
+        choices: ['A. It leads to economic stagnation.', 'B. It creates an inflated ego, which causes attachment, disharmony with nature, and ultimately, suffering.', 'C. It forces people to respect their ancestors too much, limiting progress.', 'D. It prevents the development of advanced neuroscience.'], 
+        answer: 1, 
+        explanation: 'From a Buddhist or Taoist perspective, the Western obsession with elevating the individual "ego" creates a false sense of separation from the universe, which is the root of all suffering and conflict.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'If John Locke’s theory of "Tabula Rasa" is completely true, which of the following statements must be FALSE?', 
+        code: null, 
+        choices: ['A. Children learn languages by listening to their parents.', 'B. Trauma experienced in childhood can shape adult personality.', 'C. Humans are born with an innate, pre-programmed understanding of morality and God.', 'D. Education is the most important factor in human development.'], 
+        answer: 2, 
+        explanation: 'Tabula Rasa means the mind is completely empty at birth. Therefore, the idea of being born with pre-programmed, innate knowledge (like morality or the concept of God) directly contradicts Locke’s empiricism.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'According to Immanuel Kant, why is it impossible for humans to ever fully understand the "thing-in-itself" (the universe as it actually is)?', 
+        code: null, 
+        choices: ['A. Because the universe is an illusion created by a demon.', 'B. Because the human mind actively filters, alters, and organizes raw data through the lenses of space and time before we even experience it.', 'C. Because we do not have advanced enough microscopes yet.', 'D. Because the Id represses the true nature of reality to protect the Ego.'], 
+        answer: 1, 
+        explanation: 'Kant argued that we never experience reality purely. Our "Transcendental Self" acts like a pair of tinted glasses (imposing space, time, and causality), meaning we only ever experience the world as it appears to us, not as it is.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Which philosopher would be most likely to agree with the statement: "You do not have a body; you ARE a body"?', 
+        code: null, 
+        choices: ['A. Rene Descartes', 'B. St. Augustine', 'C. Maurice Merleau-Ponty', 'D. Plato'], 
+        answer: 2, 
+        explanation: 'Merleau-Ponty\'s phenomenology centers on the "lived body." He erased the boundary between the physical form and the conscious mind, arguing embodiment is the very core of our existence.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A student fails an exam and blames their "lazy body" for wanting to sleep instead of study, claiming their "true mind" wanted to work hard. Which ancient philosopher would most strongly relate to this excuse?', 
+        code: null, 
+        choices: ['A. David Hume', 'B. Plato', 'C. Paul Churchland', 'D. Gilbert Ryle'], 
+        answer: 1, 
+        explanation: 'This is classic Platonic dualism—the Rational Soul (mind wanting to study) battling the Appetitive Soul (body wanting to sleep), with the body often framed as a hindrance to the intellect.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'Which of the following analogies best represents Gilbert Ryle’s view of the "Mind"?', 
+        code: null, 
+        choices: ['A. The mind is the driver; the body is the car.', 'B. The mind is the software; the body is the hardware.', 'C. "Team Spirit" is not a physical object on the field, but the observable coordination and enthusiasm of the players.', 'D. The mind is a blank canvas painted by society.'], 
+        answer: 2, 
+        explanation: 'Ryle used a famous category mistake analogy: asking to see the "University" after seeing all the buildings and students. The mind, like "team spirit" or "the university," isn\'t a hidden object; it\'s how the physical components behave together.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'In the context of the self, what is the primary similarity between St. Augustine and St. Thomas Aquinas?', 
+        code: null, 
+        choices: ['A. Both rejected the idea of God in favor of empiricism.', 'B. Both integrated ancient Greek philosophy (Plato/Aristotle) with Christian theology to explain the soul.', 'C. Both believed the mind is a blank slate.', 'D. Both championed Eliminative Materialism.'], 
+        answer: 1, 
+        explanation: 'Augustine "baptized" Plato (focusing on the eternal realm), while Aquinas "baptized" Aristotle (focusing on matter and form). Both used Greek logic to structure Catholic doctrine regarding the soul.' 
+      },
+      { 
+        type: 'mcq', 
+        q: 'A CEO fires 100 employees to increase profit margins, feeling no guilt because "business is business." According to Freud, what is likely true about this CEO’s psyche?', 
+        code: null, 
+        choices: ['A. They have an overly dominant Superego.', 'B. They have an under-developed Superego and are governed by a rationalized Ego serving the Id.', 'C. They have achieved Nirvana.', 'D. Their Rational Soul is in perfect harmony.'], 
+        answer: 1, 
+        explanation: 'The Superego provides moral guilt and empathy for societal rules. A lack of guilt while acting selfishly implies the Id (desire for money/power) is dominating, and the Superego is weak.' 
+      }
+    ]
+  },
 };
