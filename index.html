@@ -90,7 +90,7 @@
   /* NEON GLOW CARDS */
   .quiz-card-menu { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; cursor: pointer; transition: all 0.2s ease; display: flex; flex-direction: column; gap: 12px; }
   .quiz-card-menu:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25); }
-  .quiz-icon { width: 40px; height: 40px; background: var(--accent-light); color: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; }
+  .quiz-icon { width: 40px; height: 40px; background: var(--accent-light); color: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;}
   .quiz-title { font-size: 1.1rem; font-weight: 600; }
   .quiz-meta { font-size: 0.8rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
 
@@ -205,6 +205,7 @@
     animation: slideUpFade 0.4s ease;
   }
   #readerTitle { color: var(--accent); margin-bottom: 20px; font-size: 1.8rem; text-align: center; }
+  /* REMOVED white-space: pre-wrap so HTML cards look clean */
   #readerContent { font-size: 1rem; color: var(--text); padding-bottom: 30px; border-bottom: 1px solid var(--border); }
 
 
@@ -307,7 +308,6 @@
   <div class="quiz-grid" id="quizGrid"></div>
 </div>
 
-<!-- READING MODE SCREEN -->
 <div id="readerScreen">
   <h2 id="readerTitle">Title</h2>
   <div id="readerContent"></div>
@@ -426,7 +426,15 @@ function initMenu() {
       card.className = 'quiz-card-menu';
       
       card.innerHTML = `
-        <div class="quiz-icon">📝</div>
+        <div class="quiz-icon">
+          <div style="width: 20px; height: 16px; position: relative; color: inherit;">
+            <div style="position: absolute; width: 10px; height: 12px; background: currentColor; border-radius: 6px 6px 3px 6px; top: 0; left: 1px; opacity: 0.8;"></div>
+            <div style="position: absolute; width: 6px; height: 6px; background: currentColor; border-radius: 50%; bottom: 0; left: 1px;"></div>
+            <div style="position: absolute; width: 10px; height: 12px; background: currentColor; border-radius: 6px 6px 6px 3px; top: 0; right: 1px;"></div>
+            <div style="position: absolute; width: 6px; height: 6px; background: currentColor; border-radius: 50%; bottom: 0; right: 1px;"></div>
+            <div style="position: absolute; width: 4px; height: 8px; background: currentColor; top: 3px; left: 8px; border-radius: 2px;"></div>
+          </div>
+        </div>
         <div class="quiz-title">${esc(data.title)}</div>
         <div class="quiz-meta">${data.questions.length} Items</div>
         <div style="font-size: 0.85rem; color: var(--muted); margin-top: 8px; margin-bottom: 15px; flex-grow: 1;">${esc(data.description)}</div>
@@ -446,7 +454,15 @@ function createCategoryCard(container, title, icon, onClick) {
   card.className = 'quiz-card-menu';
   card.onclick = onClick;
   card.innerHTML = `
-    <div class="quiz-icon" style="background:var(--accent-light); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">${icon}</div>
+    <div class="quiz-icon" style="background:var(--accent-light); color:var(--accent);">
+      <div style="width: 20px; height: 16px; position: relative; color: inherit;">
+        <div style="position: absolute; width: 10px; height: 12px; background: currentColor; border-radius: 6px 6px 3px 6px; top: 0; left: 1px; opacity: 0.8;"></div>
+        <div style="position: absolute; width: 6px; height: 6px; background: currentColor; border-radius: 50%; bottom: 0; left: 1px;"></div>
+        <div style="position: absolute; width: 10px; height: 12px; background: currentColor; border-radius: 6px 6px 6px 3px; top: 0; right: 1px;"></div>
+        <div style="position: absolute; width: 6px; height: 6px; background: currentColor; border-radius: 50%; bottom: 0; right: 1px;"></div>
+        <div style="position: absolute; width: 4px; height: 8px; background: currentColor; top: 3px; left: 8px; border-radius: 2px;"></div>
+      </div>
+    </div>
     <div class="quiz-title">${esc(title)}</div>
   `;
   container.appendChild(card);
@@ -454,7 +470,16 @@ function createCategoryCard(container, title, icon, onClick) {
 
 // SMART UNIVERSAL BACK BUTTON
 function goBack() {
-  // 1. If inside a quiz answering questions OR looking at the results screen
+  // 1. If looking at the reading material
+  if (currentView === 'reader') {
+    document.getElementById('readerScreen').style.display = 'none';
+    document.getElementById('homeScreen').style.display = 'block';
+    currentView = 'quizzes';
+    initMenu();
+    return;
+  }
+  
+  // 2. If inside a quiz answering questions OR looking at the results screen
   if (activeQuizKey !== null) {
     clearInterval(timerInterval);
     document.getElementById('timerLabel').style.display = 'none';
@@ -465,15 +490,6 @@ function goBack() {
     activeQuizKey = null;
     currentView = 'quizzes'; // Force it back to the exam list menu
     initMenu(); 
-    return;
-  }
-
-  // 2. If looking at the reading material
-  if (currentView === 'reader') {
-    document.getElementById('readerScreen').style.display = 'none';
-    document.getElementById('homeScreen').style.display = 'block';
-    currentView = 'quizzes';
-    initMenu();
     return;
   }
   
