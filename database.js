@@ -525,8 +525,7 @@ const quizDB = {
     title: "GE 1: Philosophical Perspectives",
     description: "Read the reviewer before taking the exam!",
     hasTimer: false,
-    
-    // 1. ADD THIS PROPERTY AND OPEN THE BACKTICK
+  
    reviewerContent: `
     <div style="font-family: 'Inter', sans-serif; padding-bottom: 20px;">
       
